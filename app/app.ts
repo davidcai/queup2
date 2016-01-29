@@ -13,7 +13,9 @@ import {Type} from 'angular2/core';
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 export class MyApp {
+
   rootPage: Type = HomePage;
+
 
   constructor(platform: Platform) {
     platform.ready().then(() => {

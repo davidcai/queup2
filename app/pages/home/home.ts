@@ -10,15 +10,18 @@ export class HomePage {
 
   people: Array<Person>;
 
+
   constructor(private nav: NavController, PersonService: PersonService) {
     this.people = PersonService.all();
   }
+
 
   add() {
     this.nav.push(PersonPage, {
       person: null
     });
   }
+
 
   edit(person) {
     this.nav.push(PersonPage, {
