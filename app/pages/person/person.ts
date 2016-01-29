@@ -1,5 +1,5 @@
+import * as _ from 'lodash';
 import {Page, NavController, NavParams} from 'ionic-framework/ionic';
-// import * as _ from 'lodash';
 import {PersonService} from './person.service';
 
 
@@ -16,6 +16,7 @@ export class PersonPage {
   person: Person;
 
   constructor(private nav: NavController, navParams: NavParams) {
-    this.person = navParams.get('person') || {};
+    const person = navParams.get('person') || {};
+    this.person = _.cloneDeep(person);
   }
 }

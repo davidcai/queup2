@@ -2,6 +2,7 @@ import {App, Platform} from 'ionic-framework/ionic';
 import {HomePage} from './pages/home/home';
 import {PersonService} from './pages/person/person.service';
 
+
 // https://angular.io/docs/ts/latest/api/core/Type-interface.html
 import {Type} from 'angular2/core';
 

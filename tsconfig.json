@@ -15,10 +15,12 @@
     "./app/app.ts",
     "./app/pages/home/home.ts",
     "./app/pages/person/person.service.ts",
-    "./app/pages/person/person.ts"
+    "./app/pages/person/person.ts",
+    "./typings/tsd.d.ts"
   ],
   "filesGlob": [
-    "./app/**/*.ts"
+    "./app/**/*.ts",
+    "./typings/tsd.d.ts"
   ],
   "exclude": [
     "node_modules"
