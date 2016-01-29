@@ -20,7 +20,7 @@
   </ion-card>
 
   <ion-row>
-    <ion-col>
+    <ion-col *ngIf="person.id">
       <button block danger outline (click)="delete()">Delete</button>
     </ion-col>
     <ion-col>

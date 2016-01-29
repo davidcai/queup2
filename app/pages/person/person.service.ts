@@ -40,6 +40,12 @@ export class PersonService {
   }
 
 
+  create(person: Person) {
+    person.id = this.people.length + 1;
+    this.people.push(person);
+  }
+
+
   update(person: Person) {
     let target = _.find(this.people, p => { return p.id === person.id; });
     target.name = person.name;

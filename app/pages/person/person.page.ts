@@ -30,7 +30,12 @@ export class PersonPage {
 
 
   save() {
-    this.PersonService.update(this.person);
+    if (this.person.id) {
+      this.PersonService.update(this.person);
+    } else {
+      this.PersonService.create(this.person);
+    }
+    
     this.nav.pop();
   }
 }
