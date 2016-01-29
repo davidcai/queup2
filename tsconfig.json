@@ -12,10 +12,19 @@
     "inlineSources": false
   },
   "files": [
-    "app/app.ts"
+    "./app/app.ts",
+    "./app/pages/home/home.ts",
+    "./app/pages/person/person.service.ts",
+    "./app/pages/person/person.ts"
+  ],
+  "filesGlob": [
+    "./app/**/*.ts"
   ],
   "exclude": [
     "node_modules"
   ],
-  "compileOnSave": false
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }

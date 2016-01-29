@@ -5,6 +5,17 @@
 </ion-navbar>
 
 <ion-content class="home">
+
+  <div padding>
+    <button block secondary (click)="add()">Add to queue</button>
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="#person of people" (click)="edit(person)">
+      {{person.name}}
+    </ion-item>
+  </ion-list>
+
   <ion-card>
     <ion-card-header>
       Card Header
