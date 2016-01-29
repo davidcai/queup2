@@ -1,5 +1,5 @@
 import {App, Platform} from 'ionic-framework/ionic';
-import {HomePage} from './pages/home/home';
+import {HomePage} from './pages/home/home.page';
 import {PersonService} from './pages/person/person.service';
 
 

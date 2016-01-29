@@ -20,6 +20,11 @@ export class PersonService {
         id: 2,
         name: 'Jon Snow',
         status: 'Winter is coming'
+      },
+      {
+        id: 3,
+        name: 'Lara Croft',
+        status: 'It\'s a clock... It\'s ticking'
       }
     ];
   }
@@ -27,6 +32,11 @@ export class PersonService {
 
   all() {
     return this.people;
+  }
+
+
+  remove(person: Person) {
+    _.remove(this.people, p => { return p.id === person.id; });
   }
 
 

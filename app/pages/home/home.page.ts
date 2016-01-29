@@ -1,5 +1,6 @@
 import {Page, NavController} from 'ionic-framework/ionic';
-import {Person, PersonPage} from '../person/person';
+import {Person} from '../person/person';
+import {PersonPage} from '../person/person.page';
 import {PersonService} from '../person/person.service';
 
 
