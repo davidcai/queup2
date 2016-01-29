@@ -10,11 +10,11 @@
     <ion-card-content>
       <ion-input floating-label>
         <ion-label>Name</ion-label>
-        <input type="text">
+        <input type="text" [(ngModel)]="person.name">
       </ion-input>
       <ion-input floating-label>
         <ion-label>Status</ion-label>
-        <textarea row="5"></textarea>
+        <textarea row="5" [(ngModel)]="person.status"></textarea>
       </ion-input>
     </ion-card-content>
   </ion-card>

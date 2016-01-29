@@ -18,4 +18,11 @@ export class HomePage {
       person: null
     });
   }
+
+  edit(person) {
+    console.log(person);
+    this.nav.push(PersonPage, {
+      person: person
+    });
+  }
 }
