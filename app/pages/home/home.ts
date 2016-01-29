@@ -11,7 +11,7 @@ export class HomePage {
   people: Array<Person>;
 
   constructor(private nav: NavController, PersonService: PersonService) {
-    this.people = PersonService.getPeople();
+    this.people = PersonService.all();
   }
 
   add() {
@@ -21,7 +21,6 @@ export class HomePage {
   }
 
   edit(person) {
-    console.log(person);
     this.nav.push(PersonPage, {
       person: person
     });

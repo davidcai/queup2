@@ -4,8 +4,9 @@ import {PersonService} from './person.service';
 
 
 export interface Person {
+  id: number;
   name: string;
-  status: string;
+  status?: string;
 }
 
 
@@ -15,8 +16,21 @@ export interface Person {
 export class PersonPage {
   person: Person;
 
-  constructor(private nav: NavController, navParams: NavParams) {
+  constructor(
+    private nav: NavController,
+    navParams: NavParams,
+    private PersonService: PersonService) {
+
     const person = navParams.get('person') || {};
     this.person = _.cloneDeep(person);
+  }
+
+  delete() {
+    this.nav.pop();
+  }
+
+  save() {
+    this.PersonService.update(this.person);
+    this.nav.pop();
   }
 }
