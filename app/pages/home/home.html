@@ -11,9 +11,18 @@
   </div>
 
   <ion-list>
-    <ion-item *ngFor="#person of people" (click)="edit(person)">
-      {{person.name}}
-    </ion-item>
+    <ion-item-sliding *ngFor="#person of people">
+      <button ion-item (click)="edit(person)">
+        <h2>{{person.name}}</h2>
+        <p>{{person.status}}</p>
+      </button>
+      <ion-item-options>
+        <button danger (click)="delete(person)">
+          <ion-icon name="ios-trash" icon-left></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
 
 </ion-content>

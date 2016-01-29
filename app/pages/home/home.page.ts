@@ -12,7 +12,10 @@ export class HomePage {
   people: Array<Person>;
 
 
-  constructor(private nav: NavController, PersonService: PersonService) {
+  constructor(
+    private nav: NavController,
+    private PersonService: PersonService
+  ) {
     this.people = PersonService.all();
   }
 
@@ -21,6 +24,11 @@ export class HomePage {
     this.nav.push(PersonPage, {
       person: null
     });
+  }
+
+
+  delete(person) {
+    this.PersonService.remove(person);
   }
 
 
