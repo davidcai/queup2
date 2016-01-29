@@ -10,7 +10,7 @@ export class HomePage {
   people: Array<{ name: string, status: string }>;
 
   constructor(private nav: NavController, PersonService: PersonService) {
-				this.people = PersonService.getPeople();
+    this.people = PersonService.getPeople();
   }
 
   add() {
